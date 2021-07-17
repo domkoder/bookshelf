@@ -4,6 +4,11 @@
 
 Elaborate on your learnings here in `INSTRUCTIONS.md`
 
+1. leant how render a react app again by using react-dom library.
+2. also learned how to use the reach UI dialog to create a dialog/modal in my
+   react app.
+3. Created reusable login form component.
+
 ## Background
 
 The first step to any React app is to create a component and render it to the
