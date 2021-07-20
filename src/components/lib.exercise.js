@@ -1,14 +1,16 @@
 import styled from '@emotion/styled/macro'
 import {Dialog as ReachDialog} from '@reach/dialog'
+import * as colors from 'styles/colors'
+import * as mq from 'styles/media-queries'
 
 const buttonVariants = {
   primary: {
-    background: '#3f51b5',
-    color: 'white',
+    background: colors.indigo,
+    color: colors.base,
   },
   secondary: {
-    background: '#f1f2f7',
-    color: '#434449',
+    background: colors.gray,
+    color: colors.text,
   },
 }
 const Button = styled.button(
@@ -23,8 +25,8 @@ const Button = styled.button(
 
 const Input = styled.input({
   borderRadius: '3px',
-  border: '1px solid #f1f1f4',
-  background: '#f1f2f7',
+  border: `1px solid ${colors.gray10}`,
+  background: colors.gray,
   padding: '8px 12px',
 })
 
@@ -38,8 +40,8 @@ const CircleButton = styled.button({
   alignItems: 'center',
   justifyContent: 'center',
   background: 'white',
-  color: '#434449',
-  border: `1px solid #f1f1f4`,
+  color: colors.text,
+  border: `1px solid ${colors.gray10}`,
   cursor: 'pointer',
 })
 
