@@ -1,5 +1,6 @@
 /** @jsx jsx */
 import {jsx} from '@emotion/core'
+
 import 'bootstrap/dist/css/bootstrap-reboot.css'
 import '@reach/dialog/styles.css'
 import * as React from 'react'
@@ -55,9 +56,6 @@ function App() {
     console.log('register', formData)
   }
 
-  // 🐨 this div could use a css prop to get its children rendered nicer
-  // 🎨
-  //
   return (
     <div
       css={{
@@ -89,7 +87,6 @@ function App() {
             />
           </ModalContents>
         </Modal>
-
         <Modal>
           <ModalOpenButton>
             <Button variant="secondary">Register</Button>
