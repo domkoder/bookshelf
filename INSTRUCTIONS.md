@@ -4,6 +4,14 @@
 
 Elaborate on your learnings here in `INSTRUCTIONS.md`
 
+1. learnt how to style react with emotion using the css-in-js approach.
+2. Also learnt about the benefits of using css-in-js.
+3. writing maintainable css in react.
+4. learnt about the two way to style component in react with emotion: first is
+   use the the styled component second is using css props. styled components
+   carry there css with them while css props apply styles to this component.
+5. i also learnt how to use keyframe in emotion.
+
 ## Background
 
 There are many ways to style React applications, each approach comes with its
