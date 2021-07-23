@@ -4,6 +4,9 @@
 
 Elaborate on your learnings here in `INSTRUCTIONS.md`
 
+1. Made API call using the window.fetch API with React.useEffect callback
+   function. manage the state with a status enum.
+
 ## Background
 
 Our app wouldn't be very interesting without the ability to request data from a
