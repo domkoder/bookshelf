@@ -6,6 +6,9 @@ Elaborate on your learnings here in `INSTRUCTIONS.md`
 
 1. Made API call using the window.fetch API with React.useEffect callback
    function. manage the state with a status enum.
+2. Used encodeURIComponent to encode the search query.
+3. Handled errors using async, await and .then() function. when there is an
+   error the promise is rejected.
 
 ## Background
 
