@@ -1,11 +1,10 @@
 /** @jsx jsx */
-import {jsx} from '@emotion/core'
-
+import {css, jsx} from '@emotion/core'
 import 'bootstrap/dist/css/bootstrap-reboot.css'
 import '@reach/dialog/styles.css'
 import * as React from 'react'
 import ReactDOM from 'react-dom'
-import {Button, Input, FormGroup, Spinner} from './components/lib'
+import {Button, Input, FormGroup} from './components/lib'
 import {Modal, ModalContents, ModalOpenButton} from './components/modal'
 import {Logo} from './components/logo'
 
@@ -22,16 +21,16 @@ function LoginForm({onSubmit, submitButton}) {
 
   return (
     <form
-      css={{
-        display: 'flex',
-        flexDirection: 'column',
-        alignItems: 'stretch',
-        '> div': {
-          margin: '10px auto',
-          width: '100%',
-          maxWidth: '300px',
-        },
-      }}
+      css={css`
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        > div {
+          margin: 10px auto;
+          width: 100%;
+          maxwidth: 300px;
+        }
+      `}
       onSubmit={handleSubmit}
     >
       <FormGroup>
@@ -42,9 +41,7 @@ function LoginForm({onSubmit, submitButton}) {
         <label htmlFor="password">Password</label>
         <Input id="password" type="password" />
       </FormGroup>
-      <div>
-        {React.cloneElement(submitButton, {type: 'submit'})} <Spinner />
-      </div>
+      <div>{React.cloneElement(submitButton, {type: 'submit'})}</div>
     </form>
   )
 }
@@ -60,23 +57,23 @@ function App() {
 
   return (
     <div
-      css={{
-        display: 'flex',
-        flexDirection: 'column',
-        alignItems: 'center',
-        justifyContent: 'center',
-        width: '100%',
-        height: '100vh',
-      }}
+      css={css`
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 100vh;
+      `}
     >
       <Logo width="80" height="80" />
       <h1>Bookshelf</h1>
       <div
-        css={{
-          display: 'grid',
-          gridTemplateColumns: 'repeat(2, minmax(0, 1fr))',
-          gridGap: '0.75rem',
-        }}
+        css={css`
+          display: grid;
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+          grid-gap: 0.75rem;
+        `}
       >
         <Modal>
           <ModalOpenButton>

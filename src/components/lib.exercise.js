@@ -1,50 +1,32 @@
-import styled from '@emotion/styled/macro'
-import {keyframes} from '@emotion/core'
+import styled from '@emotion/styled'
 import {Dialog as ReachDialog} from '@reach/dialog'
-import {FaSpinner} from 'react-icons/fa'
-import * as colors from 'styles/colors'
-import * as mq from 'styles/media-queries'
 
-const spin = keyframes({
-  '0%': {transform: 'rotate(0deg)'},
-  '100%': {transform: 'rotate(100deg)'},
-})
-
-const Spinner = styled(FaSpinner)({
-  animation: `${spin} 1s linear infinite`,
-})
-
-Spinner.defaultProps = {
-  'aria-label': 'loading',
+const buttonVariant = {
+  primary: `background: #3f51b5;
+            color: white;`,
+  secondary: ` background: #f1f2f7;
+            color: #434449`,
 }
 
-const buttonVariants = {
-  primary: {
-    background: colors.indigo,
-    color: colors.base,
-  },
-  secondary: {
-    background: colors.gray,
-    color: colors.text,
-  },
-}
+const Button = styled.button`
+  padding: 10px 15px;
+  border: 0;
+  line-height: 1;
+  border-radius: 3px;
+  ${({variant = 'primary'}) => buttonVariant[variant]}
+`
 
-const Button = styled.button(
-  {
-    padding: '10px 15px',
-    border: '0',
-    lineHeight: '1',
-    borderRadius: '3px',
-  },
-  ({variant = 'primary'}) => buttonVariants[variant],
-)
+const Input = styled.input`
+  border-radius: 3px;
+  border: 1px solid #f1f1f4;
+  background: #f1f2f7;
+  padding: 8px 12px;
+`
 
-const Input = styled.input({
-  borderRadius: '3px',
-  border: `1px solid ${colors.gray10}`,
-  background: colors.gray,
-  padding: '8px 12px',
-})
+const FormGroup = styled.div`
+  display: flex;
+  flex-direction: column;
+`
 
 const CircleButton = styled.button({
   borderRadius: '30px',
@@ -55,9 +37,9 @@ const CircleButton = styled.button({
   display: 'flex',
   alignItems: 'center',
   justifyContent: 'center',
-  background: colors.base,
-  color: colors.text,
-  border: `1px solid ${colors.gray10}`,
+  background: 'white',
+  color: '#434449',
+  border: `1px solid #f1f1f4`,
   cursor: 'pointer',
 })
 
@@ -67,15 +49,10 @@ const Dialog = styled(ReachDialog)({
   paddingBottom: '3.5em',
   boxShadow: '0 10px 30px -5px rgba(0, 0, 0, 0.2)',
   margin: '20vh auto',
-  [mq.small]: {
+  '@media (max-width: 991px)': {
     width: '100%',
     margin: '10vh auto',
   },
 })
 
-const FormGroup = styled.div({
-  display: 'flex',
-  flexDirection: 'column',
-})
-
-export {Button, Input, CircleButton, Dialog, FormGroup, Spinner}
+export {CircleButton, Dialog, Button, Input, FormGroup}
